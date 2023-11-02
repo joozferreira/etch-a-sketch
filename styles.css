@@ -83,6 +83,7 @@ h3 {
 
 .mode, .size {
   width: 140px;
+  font-size: 90%;
   margin-bottom: 10px;
   box-shadow: 2px 2px 2px 2px #393737;
 }
