@@ -92,8 +92,12 @@ h3 {
   box-shadow: -2px -2px 2px 2px #393737;
 }
 
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
 .btn {
-  margin-right: 20px;
   font-size: 90%;
   font-weight: 600;
   width: 50px;
