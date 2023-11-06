@@ -32,19 +32,27 @@
       <div class="toy">
         <div class="setup">
           <div class="game-mode">
-            <h3>Game Mode</h3>
-            <p class="mode selected">Classic</p>
+            <fieldset>
+              <legend>Game Mode</legend>
+              <input type="button" id="classic" class="mode selected" value="Classic">
+              <br>
+              <input type="button" id="random" class="mode" value="Random Colors">
+              <br>
+              <input type="button" id="dark" class="mode" value="Dark Shades">
+            </fieldset>
+            <!-- <p class="mode selected">Classic</p>
             <p class="mode">Random Colors</p>
-            <p class="mode">Dark Shades</p>
+            <p class="mode">Dark Shades</p> -->
           </div>
           <div class="grid-size">
-            <h3>Grid Size</h3>
-            <input type="range" name="size" id="size" min="1" max="100" value="16">
-            <p id="selected-grid"></p>
+            <fieldset>
+              <legend>Grid Size</legend>
+              <input type="range" name="size" id="size" min="1" max="100" value="16">
+              <p id="selected-grid"></p>
+            </fieldset>
           </div>
           <div class="buttons">
             <button class="reset btn">Reset</button>
-            <button class="start btn">Start</button>
           </div>
         </div>
         <div class="container"></div>
