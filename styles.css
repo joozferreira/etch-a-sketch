@@ -75,14 +75,21 @@ main {
   color: #e9ffff;
 }
 
-h3 {
+fieldset {
+  border: 1px solid #000000;
+  padding: 10px;
+}
+
+legend {
   font-size: 110%;
-  text-decoration: underline;
+  font-weight: 600;
   margin-bottom: 5px;
 }
 
 .mode {
-  width: 140px;
+  border-radius: 2px;
+  text-align: left;
+  width: 100%;
   font-size: 90%;
   margin-bottom: 10px;
   padding-left: 5px;
@@ -91,6 +98,9 @@ h3 {
 
 .selected {
   box-shadow: -1px -1px 2px 2px #393737;
+  background-color: rgb(233, 217, 183, 0.8);
+  font-weight: 700;
+  color: #000000;
 }
 
 /* Resets the input type range styles - Style is not consistent between browsers */
@@ -152,9 +162,9 @@ input[type="range"]::-moz-range-thumb {
 .btn {
   font-size: 90%;
   font-weight: 600;
-  width: 50px;
+  width: 100%;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 8px;
   background-color: #e3e3e3;
 }
 
