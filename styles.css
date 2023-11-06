@@ -98,7 +98,7 @@ legend {
 
 .selected {
   box-shadow: -1px -1px 2px 2px #393737;
-  background-color: rgb(233, 217, 183, 0.8);
+  background-color: #aaaaaa;
   font-weight: 700;
   color: #000000;
 }
