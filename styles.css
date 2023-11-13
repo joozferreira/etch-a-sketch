@@ -169,11 +169,22 @@ input[type="range"]::-moz-range-thumb {
   background-color: #e3e3e3;
 }
 
-.container {
+#screen {
   height: 450px;
   width: 450px;
   background-color: #ffffff;
   border-radius: 3px;
+}
+
+#container {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.square {
+  border: 1px #dfdfdf9b solid;
 }
 
 footer {
