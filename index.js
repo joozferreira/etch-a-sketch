@@ -27,8 +27,16 @@ sliderSize.addEventListener("input", () => {
   settings[1] = sliderSize.value;
 });
 
+// Logic to Start Button
+const start = document.getElementById("start");
+start.addEventListener('click', () => {
+  const gameMode = settings[0];
+  const gameSize = settings[1];
+  createGrid(gameMode, gameSize);
+});
+
 // Define function to update the grid
-function createGrid(size) {
+function createGrid(mode, size) {
   // Clear current grid
   if (screen.lastElementChild !== null) {
     screen.removeChild(screen.lastElementChild);
@@ -50,11 +58,25 @@ function createGrid(size) {
   const squares = document.getElementsByClassName("square");
   Array.from(squares).forEach( (square) => {
     square.style.width = (450 / size) + "px";
-    square.addEventListener("hover", paintSquare(e));
+    square.addEventListener("mouseover", () => {
+      switch (mode) {
+        case ("classic"):
+          square.style.backgroundColor = "#a3a3a3";
+          break;
+        case ("random"):
+          if(!square.style.backgroundColor) {
+            square.style.backgroundColor = generateRandomColor();
+          }
+          break;
+        case ("dark"):
+          darkColor();
+          break;
+      }
+    })
   });
 }
 
-const start = document.getElementById("start");
-start.addEventListener('click', () => {
-  createGrid(settings[1]);
-});
+// Function to paint squares when hovered
+function generateRandomColor() {
+  return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+}
