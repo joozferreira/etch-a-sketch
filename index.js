@@ -69,7 +69,12 @@ function createGrid(mode, size) {
           }
           break;
         case ("dark"):
-          darkColor();
+          square.style.backgroundColor = "#000000";
+          if (!square.style.opacity) {
+            square.style.opacity = 0.1;
+          } else if (square.style.opacity < 1) {
+            square.style.opacity = Number(square.style.opacity) + 0.1;
+          }
           break;
       }
     })
