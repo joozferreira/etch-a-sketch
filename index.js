@@ -76,7 +76,6 @@ function createGrid(mode, size) {
   });
 }
 
-// Function to paint squares when hovered
 function generateRandomColor() {
   return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
 }
