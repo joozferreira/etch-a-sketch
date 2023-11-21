@@ -49,6 +49,7 @@ svg {
 
 main {
   flex-grow: 1;
+  background-color: #efefef;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,4 +196,34 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .toy {
+    flex-direction: column-reverse;
+    width: 600px;
+    height: 90%;
+    gap: 1em;
+  }
+
+  .setup, #screen {
+    max-width: 90%;
+  }
+
+  .setup {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #screen {
+    aspect-ratio: 1 / 1;
+  }
+
+  .btn {
+    width: 5em;
+  }
+
+  .mode {
+    width: 10em;
+  }
 }
