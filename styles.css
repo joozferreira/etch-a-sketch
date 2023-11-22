@@ -15,6 +15,8 @@ body {
   flex-direction: column;
 }
 
+/* Main structure of the file */
+
 header {
   height: 7vh;
   width: 100vw;
@@ -42,7 +44,7 @@ h1 {
 svg {
   height: 6vh;
   width: auto;
-  fill: #ffffff; /* https://www.shecodes.io/athena/57595-how-to-change-svg-color-with-css */
+  fill: #FFFFFF; /* https://www.shecodes.io/athena/57595-how-to-change-svg-color-with-css */
 }
 
 .rules-and-credits {
@@ -53,10 +55,106 @@ svg {
 
 main {
   flex-grow: 1;
-  background-color: #efefef;
+  background-color: #EFEFEF;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2em;
+}
+
+footer {
+  flex: 0 1 auto;
+  height: 4vh;
+  font-size: 80%;
+  background: linear-gradient(45deg, rgba(163,66,62,1) 34%, rgba(235,167,25,1) 83%);
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Styling of the setup section and screen */
+.toy {
+  width: 97vw;
+  height: calc(95vw + 25vh);
+  background: linear-gradient(135deg, rgba(235,47,25,1) 11%, rgba(159,33,19,1) 91%);
+  border-radius: 5%;
+  box-shadow: 10px 10px 20px #8b0000;
+  padding: 1em;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.setup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1em;
+  color: #E9FFFF;
+}
+
+fieldset {
+  border: 1px solid #000000;
+  padding: 10px;
+}
+
+legend {
+  font-size: 110%;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.mode {
+  border-radius: 2px;
+  text-align: left;
+  width: 100%;
+  font-size: 90%;
+  margin-bottom: 10px;
+  padding: 0 5px;
+  box-shadow: 1px 1px 2px 2px #393737;
+}
+
+.selected {
+  box-shadow: -1px -1px 2px 2px #393737;
+  background-color: #aaaaaa;
+  font-weight: 700;
+  color: #000000;
+}
+
+#selected-grid {
+  margin-top: 1em;
+  text-align: right;
+  font-size: 90%;
+}
+
+.btn {
+  font-size: 90%;
+  font-weight: 600;
+  width: 110%;
+  height: 2.5rem;
+  border-radius: 8px;
+  background-color: #e3e3e3;
+}
+
+#screen {
+  height: 90vw;
+  width: 90vw;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin: 1em;
+}
+
+#container {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.square {
+  border: 1px #dfdfdf9b solid;
 }
 
 /*
@@ -108,6 +206,7 @@ legend {
   font-weight: 700;
   color: #000000;
 }
+*/
 
 /* Resets the input type range styles - Style is not consistent between browsers */
 /* Check https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/ */
@@ -154,6 +253,7 @@ input[type="range"]::-moz-range-thumb {
   background-color: #f9f2f2;
 }
 
+/*
 #selected-grid {
   margin-top: 3px;
   text-align: right;
@@ -191,16 +291,6 @@ input[type="range"]::-moz-range-thumb {
 
 .square {
   border: 1px #dfdfdf9b solid;
-}
-
-footer {
-  flex: 0 1 auto;
-  height: 5vh;
-  background: linear-gradient(45deg, rgba(163,66,62,1) 34%, rgba(235,167,25,1) 83%);
-  color: #FFF;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
