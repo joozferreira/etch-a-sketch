@@ -90,6 +90,7 @@ footer {
 .setup {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 1em;
   color: #E9FFFF;
@@ -129,10 +130,59 @@ legend {
   font-size: 90%;
 }
 
+/* Resets the input type range styles - Style is not consistent between browsers */
+/* Check https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/ */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Styling for Chrome, Safari, Opera, and Edge Chromium */
+/* To style the slider bar, called Track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #000000;
+  height: 0.2rem;
+  border-radius: 3px;
+}
+
+/* To style the element that slides, called Thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: #f9f2f2;
+  margin-top: -0.35rem;
+}
+
+/* Styling for Firefox */
+/* To style the slider bar, called Track */
+input[type="range"]::-moz-range-track {
+  background: #b37676;
+  height: 0.2rem;
+  border-radius: 3px;
+}
+
+/* To style the element that slides, called Thumb */
+input[type="range"]::-moz-range-thumb {
+  border: none;
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  background-color: #f9f2f2;
+}
+
+.buttons {
+  width: 100%;
+}
+
 .btn {
   font-size: 90%;
   font-weight: 600;
-  width: 110%;
+  width: 100%;
   height: 2.5rem;
   border-radius: 8px;
   background-color: #e3e3e3;
@@ -206,54 +256,7 @@ legend {
   font-weight: 700;
   color: #000000;
 }
-*/
 
-/* Resets the input type range styles - Style is not consistent between browsers */
-/* Check https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/ */
-input[type="range"] {
-  -webkit-appearance: none;
-  appearance: none;
-  background: transparent;
-  cursor: pointer;
-  width: 100%;
-}
-
-/* Styling for Chrome, Safari, Opera, and Edge Chromium */
-/* To style the slider bar, called Track */
-input[type="range"]::-webkit-slider-runnable-track {
-  background: #000000;
-  height: 0.2rem;
-  border-radius: 3px;
-}
-
-/* To style the element that slides, called Thumb */
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 1rem;
-  width: 1rem;
-  border-radius: 50%;
-  background-color: #f9f2f2;
-  margin-top: -0.35rem;
-}
-
-/* Styling for Firefox */
-/* To style the slider bar, called Track */
-input[type="range"]::-moz-range-track {
-  background: #b37676;
-  height: 0.2rem;
-  border-radius: 3px;
-}
-
-/* To style the element that slides, called Thumb */
-input[type="range"]::-moz-range-thumb {
-  border: none;
-  border-radius: 50%;
-  height: 1rem;
-  width: 1rem;
-  background-color: #f9f2f2;
-}
-
-/*
 #selected-grid {
   margin-top: 3px;
   text-align: right;
