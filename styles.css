@@ -9,7 +9,8 @@
 body {
   height: 100vh;
   width: 100vw;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 
+               Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.5;
   display: flex;
   flex-direction: column;
@@ -26,7 +27,7 @@ header {
   justify-content: space-evenly;
   background: linear-gradient(45deg, rgba(163,66,62,1) 34%, rgba(235,167,25,1) 83%);
   color: #FFFFFF;
-  padding: 0 4em;
+  padding: 0 15vw;
 }
 
 .logo {
@@ -76,12 +77,12 @@ footer {
 
 /* Styling of the setup section and screen */
 .toy {
-  width: 97vw;
-  height: calc(95vw + 25vh);
+  width: 95vw;
+  height: auto;
   background: linear-gradient(135deg, rgba(235,47,25,1) 11%, rgba(159,33,19,1) 91%);
   border-radius: 5%;
   box-shadow: 10px 10px 20px #8b0000;
-  padding: 1em;
+  padding: 2em;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -189,8 +190,11 @@ input[type="range"]::-moz-range-thumb {
 }
 
 #screen {
-  height: 90vw;
-  width: 90vw;
+  height: 90%;
+  max-height: 450px;
+  width: 90%;
+  max-width: 450px;
+  aspect-ratio: 1 / 1;
   background-color: #ffffff;
   border-radius: 5px;
   margin: 1em;
@@ -205,123 +209,32 @@ input[type="range"]::-moz-range-thumb {
 
 .square {
   border: 1px #dfdfdf9b solid;
+  aspect-ratio: 1 / 1;
 }
 
-/*
-.toy {
-  width: 800px;
-  height: 500px;
-  background: linear-gradient(135deg, rgba(235,47,25,1) 11%, rgba(159,33,19,1) 91%);
-  border-radius: 5%;
-  box-shadow: 10px 10px 20px #8b0000;
-  padding: 1em;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+
+/* Improve of responsiveness for smaller screens */
+@media screen and (max-width: 428px) {
+  .game-mode, .grid-size {
+    width: 100%;
+  }
 }
 
-.setup {
-  max-width: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: 2em;
-  color: #e9ffff;
-}
-
-fieldset {
-  border: 1px solid #000000;
-  padding: 10px;
-}
-
-legend {
-  font-size: 110%;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.mode {
-  border-radius: 2px;
-  text-align: left;
-  width: 100%;
-  font-size: 90%;
-  margin-bottom: 10px;
-  padding-left: 5px;
-  box-shadow: 1px 1px 2px 2px #393737;
-}
-
-.selected {
-  box-shadow: -1px -1px 2px 2px #393737;
-  background-color: #aaaaaa;
-  font-weight: 700;
-  color: #000000;
-}
-
-#selected-grid {
-  margin-top: 3px;
-  text-align: right;
-  font-size: 90%;
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.btn {
-  font-size: 90%;
-  font-weight: 600;
-  width: 100%;
-  height: 50px;
-  border-radius: 8px;
-  background-color: #e3e3e3;
-}
-
-#screen {
-  height: 450px;
-  width: 450px;
-  background-color: #ffffff;
-  border-radius: 3px;
-}
-
-#container {
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-}
-
-.square {
-  border: 1px #dfdfdf9b solid;
-}
-
-@media screen and (max-width: 768px) {
+/* Styling for larger screens */
+@media screen and (min-width: 650px) {
   .toy {
-    flex-direction: column-reverse;
-    width: 600px;
+    flex-direction: row;
+    width: 625px;
     height: 90%;
     gap: 1em;
   }
 
-  .setup, #screen {
-    max-width: 90%;
+  .screen {
+    width: 450px;
+    height: 450px;
   }
 
-  .setup {
-    flex-direction: row;
-    justify-content: space-between;
+  .game-mode, .grid-size {
+    width: 100%;
   }
-
-  #screen {
-    aspect-ratio: 1 / 1;
-  }
-
-  .btn {
-    width: 5em;
-  }
-
-  .mode {
-    width: 10em;
-  }
-} */
+}
