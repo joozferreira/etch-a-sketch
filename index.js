@@ -56,8 +56,9 @@ function createGrid(mode, size) {
 
   // Add width to squares and event listener
   const squares = document.getElementsByClassName("square");
+  const squareWidth = (container.offsetWidth / size);
   Array.from(squares).forEach( (square) => {
-    square.style.width = (container.offsetWidth / size) + "px";
+    square.style.width = squareWidth + "px";
     square.addEventListener("mouseover", () => {
       switch (mode) {
         case ("classic"):
