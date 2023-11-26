@@ -1,4 +1,5 @@
 // Global variable to define the settings of the game as an array
+const main = document.querySelector("main");
 const settings = ['classic', 16];
 const screen = document.getElementById("screen");
 
@@ -85,3 +86,18 @@ function createGrid(mode, size) {
 function generateRandomColor() {
   return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
 }
+
+// Add interactivity to the How to Play and Credits sections
+const credits = document.getElementById("r&c");
+credits.addEventListener("click", () => {
+  const item = document.getElementById(credits.classList[0]);
+  item.style.display = "flex";
+  main.style.opacity = 0.3;
+})
+
+const close = document.getElementById("close");
+close.addEventListener("click", () => {
+  const item = close.parentNode;
+  item.style.display = "none";
+  main.style.opacity = 1;
+})
