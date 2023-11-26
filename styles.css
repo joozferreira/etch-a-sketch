@@ -111,7 +111,7 @@ legend {
 .mode {
   border-radius: 2px;
   text-align: left;
-  width: 100%;
+  width: 8em;
   font-size: 90%;
   margin-bottom: 10px;
   padding: 0 5px;
@@ -244,6 +244,10 @@ ul {
 /* Improve of responsiveness for smaller screens */
 @media screen and (max-width: 428px) {
   .game-mode, .grid-size {
+    width: 100%;
+  }
+
+  .mode {
     width: 100%;
   }
 }
